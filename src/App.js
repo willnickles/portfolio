@@ -3,8 +3,10 @@ import ScrollProgress from "./components/ScrollProgress";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
-import Resume from "./sections/Resume";
+import Experiences from "./sections/Experiences";
 import Contact from "./sections/Contact";
+import Skills from "./sections/Skills";
+
 
 function App() {
   return (
@@ -13,7 +15,8 @@ function App() {
       <Home />
       <About />
       <Projects />
-      <Resume />
+      <Experiences />
+      <Skills />
       <Contact />
     </div>
   );

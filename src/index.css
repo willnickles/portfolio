@@ -3,6 +3,36 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc; /* Light gray background for the section */
+}
+
+.shadow-lg {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the document */
+}
+.border-l-2 {
+  border-color: #e5e7eb; /* Tailwind gray-300 */
+}
+.bg-blue-500 {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+}
+.timeline-line {
+  background: linear-gradient(to bottom, #3b82f6, #e5e7eb);
+}
+
+
+@keyframes grow {
+  0% {
+    height: 0;
   }
-  
+  100% {
+    height: 100%;
+  }
+}
