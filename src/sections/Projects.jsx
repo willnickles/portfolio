@@ -12,11 +12,10 @@ const Projects = () => {
       image: appScreenshot,
       githubLink: "https://github.com/willnickles/task-manager-v1",
     },
-    // Add more projects here
   ];
 
   return (
-    <Section id="projects" title="My Projects" bgColor="bg-blue-500">
+    <Section id="projects" title={<span className="text-black">My Projects</span>} bgColor="bg-white">
       <div className="flex flex-col items-center justify-center h-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (

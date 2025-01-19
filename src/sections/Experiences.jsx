@@ -33,7 +33,7 @@ const Experiences = () => {
       date: "Graduation - May 2024",
       description: [
         "Major: Computer Science, Minor: Business Administration.",
-        "Relevant Coursework: Algorithms, Data Structures, Intro to Networks.",
+        "Relevant Coursework: Algorithms, Data Structures, Intro to Software Development, Intro to Networks, Discrete Mathematics, Computer Science Fundamentals, Linear Algebra",
       ],
     },
   ];
@@ -41,32 +41,30 @@ const Experiences = () => {
   return (
     <motion.section
       id="experiences"
-      className="bg-blue-500"
+      className="bg-white py-32"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: false, amount: 0.3 }}
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-white">
+      <h2 className="text-4xl font-bold text-center mb-12 text-black">
         Experiences
       </h2>
       <div className="flex justify-center">
-        <Timeline className="max-w-4xl text-white">
+        <Timeline className="max-w-4xl text-black">
           {timelineData.map((item, index) => (
-            <Timeline.Item
-              key={index}
-              color="blue"
-              className="timeline-item"
-            >
+            <Timeline.Item key={index} color="blue">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
-                <h3 className="font-bold text-lg text-white">{item.title}</h3>
-                <h4 className="text-white">{item.company} | {item.date}</h4>
-                <ul className="list-disc ml-5 mt-2 text-white">
+                <h3 className="font-bold text-lg">{item.title}</h3>
+                <h4 className="text-gray-700">
+                  {item.company} | {item.date}
+                </h4>
+                <ul className="list-disc ml-5 mt-2 text-gray-600">
                   {item.description.map((desc, i) => (
                     <li key={i}>{desc}</li>
                   ))}
