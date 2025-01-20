@@ -10,17 +10,18 @@ const RotatingCube = () => {
   const meshRef = useRef();
 
   return (
-    <Canvas className="h-64 mx-auto">
+    <Canvas className="h-80 mx-auto"> {/* Increased height for better visibility */}
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
-      <mesh ref={meshRef} rotation={[Math.PI / 4, Math.PI / 4, 0]}>
-        <boxGeometry args={[2, 2, 2]} />
+      <mesh ref={meshRef} rotation={[0, 0, 0]}>  {/* Set rotation to zero */}
+        <boxGeometry args={[4, 4, 4]} />  {/* Larger cube size */}
         <meshStandardMaterial map={texture} />
       </mesh>
       <OrbitControls enableZoom={false} />
     </Canvas>
   );
 };
+
 
 const Home = () => {
   return (
